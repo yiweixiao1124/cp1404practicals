@@ -15,3 +15,4 @@ if total > DISCOUNT_THRESHOLD:
     total *= DISCOUNT_RATE
 
 print(f"Total price for 3 items is ${total:.2f}")
+

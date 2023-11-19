@@ -18,5 +18,4 @@ while choice != 'Q':
 
     print(menu)
     choice = input(">>> ").upper()
-
 print("Finished.")

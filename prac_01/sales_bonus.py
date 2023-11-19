@@ -16,3 +16,4 @@ while sales >= MIN_SALES:
         bonus = MAX_DISCOUNT
     print("bonus = $", int(sales * bonus), sep="")
     sales = float(input("Enter sales: $"))
+
