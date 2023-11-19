@@ -5,10 +5,10 @@ PASS_THRESHOLD = 50
 
 
 def main():
-    score = float(input("请输入分数: "))
+    score = float(input("Enter score: "))
     while score < MIN_SCORE or score > MAX_SCORE:
-        print("无效的分数")
-        score = float(input("请输入分数: "))
+        print("Invalid score")
+        score = float(input("Enter score: "))
     message = get_score_result(score)
     print(message)
 
