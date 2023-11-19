@@ -1,8 +1,10 @@
-MENU = "(H)ello\n(G)oodbye\n(Q)uit"
+menu = "(H)ello\n(G)oodbye\n(Q)uit"
 
-name = input("Enter name: ").capitalize()
-print(MENU)
+name = input("Enter name: ")
+
+print(menu)
 choice = input(">>> ").upper()
+
 while choice != 'Q':
 
     if choice == 'H':
@@ -14,7 +16,7 @@ while choice != 'Q':
     else:
         print("Invalid choice")
 
-    print(MENU)
+    print(menu)
     choice = input(">>> ").upper()
 
 print("Finished.")

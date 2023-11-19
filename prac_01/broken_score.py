@@ -4,15 +4,21 @@ Broken program to determine score status
 """
 
 # TODO: Fix this!
+MIN_SCORE = 0
+MAX_SCORE = 100
+EXCELLENT_THRESHOLD = 90
+PASS_THRESHOLD = 50
 
 score = float(input("Enter score: "))
-while score < 0 or score > 100:
+while score < MIN_SCORE or score > MAX_SCORE:
     print("Invalid score")
     score = float(input("Enter score: "))
 
-if score > 90:
-    print("Excellent")
-elif score > 50:
-    print("Passable")
+if score >= EXCELLENT_THRESHOLD:
+    message = "Excellent"
+elif score >= PASS_THRESHOLD:
+    message = "Passable"
 else:
-    print("Bad")
+    message = "Bad"
+
+print(message)
