@@ -3,7 +3,7 @@ MIN_SCORE = 0
 MAX_SCORE = 100
 EXCELLENT_THRESHOLD = 90
 PASS_THRESHOLD = 50
-menu = "\n(G)et\n(P)rint\n(S)how\n(Q)uit"
+menu = "(G)et a valid score (must be 0-100 inclusive)\n(P)rint result\n(S)how stars\n(Q)uit"
 
 
 def main():
@@ -21,6 +21,7 @@ def main():
                 print('*', end=" ")
         else:
             print("Invalid choice")
+        print()
         print(menu)
         choice = input(">>> ").upper()
 
