@@ -1,4 +1,3 @@
-import random
 MIN_SCORE = 0
 MAX_SCORE = 100
 EXCELLENT_THRESHOLD = 90
@@ -11,14 +10,15 @@ def main():
     choice = input(">>> ").upper()
     while choice != 'Q':
         if choice == 'G':
-            score = random.randint(MIN_SCORE, MAX_SCORE)
-            print(f"Random score: {score}")
+            score = float(input("Enter score: "))
+            while score < MIN_SCORE or score > MAX_SCORE:
+                print("Invalid score")
+                score = float(input("Enter score: "))
         elif choice == 'P':
             message = get_score_result(score)
             print(message)
         elif choice == 'S':
-            for i in range(score):
-                print('*', end=" ")
+            print_stars(score)
         else:
             print("Invalid choice")
         print()
@@ -35,6 +35,10 @@ def get_score_result(score):
         return "Passable"
     else:
         return "Bad"
+
+
+def print_stars(score):
+    print('*' * int(score))
 
 
 main()
