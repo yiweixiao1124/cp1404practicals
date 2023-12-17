@@ -9,5 +9,5 @@ I'm Yiwei Xiao, a student from JCU. My major is IT.
 3. Maintaining consistent code formatting
 
 ## Links
-[Programming Patterns Page]:  https://github.com/CP1404/Practicals
-[CP1404 Practicals Instructions Repository]: https://github.com/CP1404/Practicals/blob/master/README.md
+Programming Patterns Page:  https://github.com/CP1404/Practicals
+CP1404 Practicals Instructions Repository: https://github.com/yiweixiao1124/cp1404practicals
