@@ -10,4 +10,4 @@ while not is_finished:
         is_finished = True
     except ValueError:  #  - add the exception you want to catch after except
         print("Please enter a valid integer.")
-print("Valid result is:", result)
+print(f"Valid result is: result {result}")

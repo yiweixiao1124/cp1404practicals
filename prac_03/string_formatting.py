@@ -35,7 +35,7 @@ for i, number in enumerate(numbers, 1):
 
 # 1922 Gibson L-5 CES for about $16,035!
 print(f"{year} {name} for about ${cost:,.0f}!")
-
+print()
 
 # produce the following right-aligned output (DO NOT use a list):
 #   0
@@ -44,3 +44,10 @@ print(f"{year} {name} for about ${cost:,.0f}!")
 # 150
 for i in range(0, 151, 50):
     print(f"{i:>3}")
+print()
+for i in range(0, 151, 50):
+    print(f"{i:<3}")
+print()
+for i in range(0, 151, 50):
+    print(f"{i:^3}")
+print()

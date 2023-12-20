@@ -1,24 +1,33 @@
+MENU = "(C)elsius or (F)ahrenheit or (Q)uit? "
+
+
 def main():
-    choice = input("(C)elsius or (F)ahrenheit or (Q)uit? ").upper()
+    print(MENU)
+    choice = input(">>>").upper()
     while choice != 'Q':
-        while choice == 'C':
-            celsius = float(input("Enter celsius: "))
-            fahrenheit = celsius_to_fahrenheit(celsius)
-            print(f"{celsius}℃ is equal to {fahrenheit}℉")
-            choice = input("(C)elsius or (F)ahrenheit or (Q)uit? ").upper()
-        while choice == 'F':
-            fahrenheit = float(input("Enter fahrenheit: "))
-            celsius = fahrenheit_to_celsius(fahrenheit)
-            print(f"{fahrenheit}℉ is equal to {celsius}℃")
-            choice = input("(C)elsius or (F)ahrenheit or (Q)uit? ").upper()
+        if choice == 'F':
+            fahrenheit = celsius_to_fahrenheit()
+        elif choice == 'C':
+            celsius = fahrenheit_to_celsius()
+        else:
+            print("Invalid choice.")
+        print(MENU)
+        choice = input(">>>").upper()
+    print("Goodbye.")
 
 
 def celsius_to_fahrenheit(celsius):
-    return 32 + celsius * 1.8
+    celsius = float(input("Enter celsius: "))
+    fahrenheit = celsius * 9.0 / 5 + 32
+    print(f"Result is: {fahrenheit:.2f}℉")
+    return fahrenheit
 
 
 def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) / 1.8
+    fahrenheit = float(input("Enter fahrenheit: "))
+    celsius = 5 / 9 * (fahrenheit - 32)
+    print(f"Result is: {celsius:.2f}℃")
+    return celsius
 
 
 main()

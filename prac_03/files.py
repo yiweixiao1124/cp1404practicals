@@ -1,7 +1,7 @@
 # 1
 name = input("Enter name: ").capitalize()
 out_file = open("name.txt", 'w')
-out_file.write(name)
+print(name, file=out_file)
 out_file.close()
 print()
 # 2
@@ -11,16 +11,19 @@ print(f"Your name is {name}")
 in_file.close()
 print()
 # 3
+total = 0
 in_file = open("numbers.txt", 'r')
 lines = in_file.readlines()
-number1 = int(lines[0])
-number2 = int(lines[1])
-print(number1 + number2)
+for number in range(0, 2):
+    number = in_file.readline()
+    total = total + int(number)
+print(total)
 in_file.close()
 print()
 # 4
+total = 0
 in_file = open("numbers.txt", 'r')
-line = 0
-for i in in_file:
-    line = line + 1
-print(line)
+numbers = in_file.readline()
+for number in numbers:
+    total = total + 1
+print(total)
