@@ -5,15 +5,15 @@ INDEX_CHAMPION = 2
 
 def main():
     records = get_records(FILENAME)
-    champions_to_count, countries = process_records
+    champions_to_count, countries = process_records(records)
     print_results(champions_to_count, countries)
 
 
-def get_records(filename):
+def get_records(FILENAME):
     records = []
     with open(FILENAME, "r", encoding="utf-8-sig") as in_file:
         in_file.readline()
-        for line in in_file.readline():
+        for line in in_file:
             parts = line.strip().split(',')
             records.append(parts)
     return records
@@ -23,11 +23,11 @@ def process_records(records):
     champions_to_count = {}
     countries = set()
     for record in records:
-        countries.add(record[INDEX_COUNTRY])
+        countries.add(record[1])
         try:
-            champions_to_count[record[INDEX_CHAMPION]] += 1
+            champions_to_count[record[2]] += 1
         except KeyError:
-            champions_to_count[record[INDEX_CHAMPION]] = 1
+            champions_to_count[record[2]] = 1
     return champions_to_count, countries
 
 
