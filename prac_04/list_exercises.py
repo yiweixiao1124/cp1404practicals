@@ -1,6 +1,6 @@
 numbers = []
-for number in range(5):
-    number = int(input("Number: "))
+for number in range(1, 6):
+    number = int(input(f"Number{number}: "))
     numbers.append(number)
 print(f"The first number is {numbers[0]}")
 print(f"The last number is {numbers[-1]}")

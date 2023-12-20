@@ -7,26 +7,28 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = get_data()
-    display_subject_details(data)
+    sunjects = get_sunjects()
+    display_subject_details(sunjects)
 
 
-def get_data():
-    data = []
+def get_sunjects():
+    sunjects = []
     input_file = open(FILENAME)
     for line in input_file:
+        print(line)
+        print(repr(line))
         line = line.strip()  # Remove the \n
         parts = line.split(',')  # Separate the data into its parts
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        data.append(parts)
-    print(data)
-    return data
+        sunjects.append(parts)
+    print(sunjects)
     input_file.close()
+    return sunjects
 
 
-def display_subject_details(data):
-    for subject_data in data:
-        print(f"{subject_data[0]} is taught by {subject_data[1]:<12} and has {subject_data[2]:>3} students")
+def display_subject_details(sunjects):
+    for subject in subjects:
+        print(f"{subject[0]} is taught by {subject[1]:12} and has {subject[2]:4} students")
 
 
 main()
