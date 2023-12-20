@@ -7,8 +7,8 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    sunjects = get_subjects()
-    display_subject_details(sunjects)
+    subjects = get_subjects()
+    display_subject_details(subjects)
 
 
 def get_subjects():
