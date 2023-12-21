@@ -15,8 +15,8 @@ def get_subjects():
     subjects = []
     input_file = open(FILENAME)
     for line in input_file:
-        print(line)
-        print(repr(line))
+        # print(line)
+        # print(repr(line))
         line = line.strip()  # Remove the \n
         parts = line.split(',')  # Separate the data into its parts
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)

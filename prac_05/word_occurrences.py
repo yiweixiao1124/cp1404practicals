@@ -6,7 +6,7 @@ Actual:  21  minutes
 from operator import itemgetter
 word_to_counts = {}
 word_count = 0
-word_length= 0
+word_length = 0
 
 texts = input("Text: ").split()
 text = sorted(texts)
