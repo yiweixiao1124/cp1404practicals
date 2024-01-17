@@ -11,11 +11,11 @@ BoxLayout:
         Button:
             text: 'Square'
             # the following line specifies the function in the app class to call when the button is pressed
-            on_press: app.handle_calculate(input_number.text)
+            on_press: app.handle_calculate(float(input_number.text))
         Label:
             id: output_label
             font_size: 48
-            color: (1, 0, 1, 1)
+            color: (2, 0, 2, 1)
 
     Label:
         text: 'Enter a number and press "Square"'
